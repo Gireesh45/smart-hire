@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# InterviewAI 🧠
 
-## Getting Started
+InterviewAI is a cutting-edge, AI-powered interview platform designed to evaluate candidates with precision, speed, and fairness. By simulating real-world technical and behavioral interviews, it provides an immersive, end-to-end evaluation experience for tech roles ranging from Frontend Developers to ML Engineers.
 
-First, run the development server:
+## ✨ Key Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 1. Dynamic Role-Based Interviewing
+- **Tailored Questions:** Generates behavioral and technical questions specific to the candidate's chosen role (e.g., DevOps, Full Stack, Data Science) and experience level.
+- **Skill-Specific Filtering:** Asks targeted questions based on the exact skills/technologies the candidate inputs during setup (e.g., Docker, Kubernetes, React).
+- **Mandatory Introductions:** Always starts with a "Tell me about yourself" question to simulate a natural interview flow.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Live Coding Environment
+- **Integrated Code Editor:** Features a fully functional, syntax-highlighted code editor for technical screening.
+- **Role-Specific Challenges:** Assigns specialized coding challenges based on the applied role (e.g., Log Processing for DevOps, Two Sum for Software Engineers).
+- **Automated Validation:** Includes real-time test case validation and performance scoring.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Immersive AI Interviewer
+- **Text-to-Speech (TTS):** Utilizes the Web Speech API to provide a natural voice to the robotic interviewer.
+- **Live System Checks:** Enforces camera, microphone, and network system checks before the interview begins to ensure a seamless experience.
+- **Micro-Animations & Visual Polish:** Features a highly responsive, premium dark-mode aesthetic with glassmorphism, dynamic gradients, and smooth state transitions.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 4. Comprehensive Evaluation
+- **Real-Time Confidence Tracking:** Simulates AI analyzing the candidate's confidence and focus during the interview.
+- **Detailed Summary Report:** Generates a post-interview summary detailing time taken, questions attempted, performance score, and coding accuracy.
 
-## Learn More
+### 5. Production-Ready Responsiveness
+- **Adaptive Layouts:** Built with a centralized container architecture that looks stunning on ultra-wide monitors.
+- **Mobile-Optimized:** Fluidly adapts to mobile devices and tablets (including ultra-narrow screens like the Galaxy Z Fold) using responsive media queries and touch-friendly UI components.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠 Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Framework:** [Next.js 14](https://nextjs.org/) (App Router)
+- **Library:** [React 18](https://react.dev/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** Vanilla CSS Modules (Custom Design System with CSS Variables)
+- **Icons:** [Lucide React](https://lucide.dev/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Getting Started
 
-## Deploy on Vercel
+To run this project locally on your machine:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Clone the repository** (if applicable) or navigate to the project directory:
+   ```bash
+   cd interview-ai
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Install the dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser:**
+   Navigate to [http://localhost:3000](http://localhost:3000) to view the application.
+
+## 📝 Future Roadmap
+
+- **Database Integration:** Connect to Supabase or MongoDB to persistently save candidate profiles and interview transcripts.
+- **Resume Parsing:** Implement PDF parsing to automatically extract and validate candidate skills.
+- **Premium TTS:** Upgrade from the native Web Speech API to a premium service like ElevenLabs for ultra-realistic interviewer voices.
+
+---
+*Built for the future of hiring.*

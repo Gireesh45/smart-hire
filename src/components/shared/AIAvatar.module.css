@@ -1,0 +1,282 @@
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.sm {
+  scale: 0.8;
+}
+
+.md {
+  scale: 1;
+}
+
+.lg {
+  scale: 1.25;
+}
+
+.glow {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  filter: blur(50px);
+  opacity: 0.2;
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+
+.glow-idle {
+  background: var(--accent-cyan);
+}
+
+.glow-thinking {
+  background: var(--accent-amber);
+  animation: robotPulse 2s infinite;
+}
+
+.glow-speaking {
+  background: var(--accent-cyan);
+  animation: robotPulse 1s infinite;
+}
+
+@keyframes robotPulse {
+
+  0%,
+  100% {
+    opacity: 0.2;
+    scale: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+    scale: 1.2;
+  }
+}
+
+.robotContainer {
+  position: relative;
+  width: 100px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.robotHead {
+  width: 70px;
+  height: 60px;
+  background: #1e293b;
+  border: 2px solid #334155;
+  border-radius: 12px 12px 4px 4px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.05);
+}
+
+.headInner {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.antennaLeft,
+.antennaRight {
+  position: absolute;
+  top: -12px;
+  width: 3px;
+  height: 12px;
+  background: #334155;
+}
+
+.antennaLeft {
+  left: 15px;
+  transform: rotate(-15deg);
+}
+
+.antennaRight {
+  right: 15px;
+  transform: rotate(15deg);
+}
+
+.antennaLeft::after,
+.antennaRight::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -2px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #475569;
+}
+
+.robot-thinking .antennaLeft::after {
+  background: var(--accent-amber);
+  box-shadow: 0 0 8px var(--accent-amber);
+  animation: blink 0.5s infinite;
+}
+
+.robot-speaking .antennaRight::after {
+  background: var(--accent-cyan);
+  box-shadow: 0 0 8px var(--accent-cyan);
+}
+
+.visor {
+  width: 100%;
+  height: 20px;
+  background: #0f172a;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #1e293b;
+}
+
+.eyeLeft,
+.eyeRight {
+  width: 12px;
+  height: 12px;
+  background: #1e293b;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pupil {
+  width: 4px;
+  height: 4px;
+  background: var(--accent-cyan);
+  border-radius: 1px;
+  box-shadow: 0 0 6px var(--accent-cyan);
+}
+
+.robot-thinking .pupil {
+  background: var(--accent-amber);
+  box-shadow: 0 0 6px var(--accent-amber);
+  animation: scan 1s infinite alternate;
+}
+
+@keyframes scan {
+  from {
+    transform: translateX(-3px);
+  }
+
+  to {
+    transform: translateX(3px);
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.mouthPanel {
+  width: 100%;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.voiceLine {
+  width: 2px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1px;
+}
+
+.animateVoice {
+  background: var(--accent-cyan);
+  box-shadow: 0 0 4px var(--accent-cyan);
+  animation: voiceBar 0.3s infinite alternate;
+}
+
+.animateVoice:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.animateVoice:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes voiceBar {
+  from {
+    height: 4px;
+  }
+
+  to {
+    height: 10px;
+  }
+}
+
+.robotBody {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.neckConnector {
+  width: 15px;
+  height: 10px;
+  background: #334155;
+  border: 1px solid #1e293b;
+}
+
+.shoulders {
+  width: 90px;
+  height: 30px;
+  background: #1e293b;
+  border: 2px solid #334155;
+  border-radius: 8px 8px 4px 4px;
+  box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.05);
+}
+
+.statusBadge {
+  margin-top: 20px;
+  padding: 6px 16px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.statusPulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  animation: blink 1s infinite;
+}
+
+.robot-thinking .statusPulse {
+  background: var(--accent-amber);
+}
+
+.statusBadge span {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 1.5px;
+}
