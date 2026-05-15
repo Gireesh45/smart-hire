@@ -89,6 +89,7 @@
   font-weight: 800;
   color: var(--text-primary);
   letter-spacing: -0.02em;
+  margin-right: 5px;
 }
 
 .headerRight {
@@ -467,7 +468,18 @@
     padding: 60px 0 40px;
   }
 
+  .logoText {
+    font-size: 0.5 rem;
+  }
+
   .ctaCard {
     padding: 48px 24px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .logoText {
+    font-size: 10px !important;
   }
 }

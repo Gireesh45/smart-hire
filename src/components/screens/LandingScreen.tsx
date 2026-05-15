@@ -40,7 +40,7 @@ export default function LandingScreen({ onStart }: LandingScreenProps) {
       </div>
 
       <header className={styles.header}>
-        <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', margin: '1px' }}>
           <div className={styles.logo}>
             <div className={styles.logoIcon}>
               <Brain size={20} />
